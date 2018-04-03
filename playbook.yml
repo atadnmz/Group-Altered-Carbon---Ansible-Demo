@@ -1,0 +1,15 @@
+---
+# - hosts: all
+#   tasks:
+#     - name: installing repo for Java 8 in Ubuntu
+#       apt_repository: repo='ppa:openjdk-r/ppa'
+# - hosts: all
+#   roles:
+#     - role: geerlingguy.java
+#       java_packages:
+#         - openjdk-7-jdk
+
+- hosts: all
+  roles:
+    - role: geerlingguy.mysql
+      become: yes
