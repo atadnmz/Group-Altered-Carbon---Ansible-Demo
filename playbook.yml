@@ -1,15 +1,16 @@
----
-# - hosts: all
-#   tasks:
-#     - name: installing repo for Java 8 in Ubuntu
-#       apt_repository: repo='ppa:openjdk-r/ppa'
-# - hosts: all
-#   roles:
-#     - role: geerlingguy.java
-#       java_packages:
-#         - openjdk-7-jdk
-
-- hosts: all
+- hosts: versioncontrol
+  roles:
+    - role: geerlingguy.git
+      become: yes
+      
+- hosts: mysqldev
   roles:
     - role: geerlingguy.mysql
+      ignore_errors: yes
+      become: yes
+
+
+- hosts: oracleJDK1
+  roles:
+    - role: williamyeh.oracle-java
       become: yes

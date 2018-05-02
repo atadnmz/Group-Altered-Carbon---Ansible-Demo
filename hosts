@@ -1,0 +1,21 @@
+ansible-master ansible_ssh_host=192.168.99.10
+git1 ansible_ssh_host=192.168.99.12
+mysql1 ansible_ssh_host=192.168.99.11
+oracleJDK1 ansible_ssh_host=192.168.99.13
+
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
+
+[mysqldev]
+mysql1
+#msyql2
+
+[versioncontrol]
+git1
+#git2
+
+[javadev]
+oracleJDK1
+#java1

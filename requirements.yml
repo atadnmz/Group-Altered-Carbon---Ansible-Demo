@@ -1,2 +1,4 @@
 ---
+- src: geerlingguy.git
 - src: geerlingguy.mysql
+- src: williamyeh.oracle-java
